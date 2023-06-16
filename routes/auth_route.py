@@ -1,7 +1,5 @@
 from fastapi import APIRouter, status, HTTPException
 from models.schemas import Login
-from config.token_utils import write_token
-from fastapi.responses import JSONResponse
 from repositories import AuthRepository
 auth_route = APIRouter()
 

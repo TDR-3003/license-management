@@ -5,6 +5,7 @@ from starlette.middleware.cors import CORSMiddleware
 
 from routes.auth_route import auth_route
 from routes.license_route import license_route
+from routes.user_route import user_route
 
 app = FastAPI()
 app.add_middleware(
@@ -17,6 +18,7 @@ app.add_middleware(
 load_dotenv()
 app.include_router(auth_route, prefix="/api")
 app.include_router(license_route, prefix="/api")
+app.include_router(user_route, prefix="/api")
 
 
 if __name__ == "__main__":
